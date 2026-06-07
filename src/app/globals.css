@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --gold:        #d4af37;
+  --gold-dim:    rgba(212, 175, 55, 0.18);
+  --gold-border: rgba(212, 175, 55, 0.25);
+  --cream:       #fbf9f4;
+  --cream-warm:  #f4efe2;
+  --black:       #0a0a0a;
+  --charcoal:    #1a1612;
+  --text-dark:   #111111;
+  --text-mid:    #3b3631;
+  --text-muted:  rgba(30, 25, 15, 0.5);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--black);
+}
+
+body {
+  background: var(--black);
+  color: var(--text-dark);
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ─── Full-width cream glass section backdrop ───────────────── */
+.section-glass {
+  position: relative;
+  background: rgba(251, 249, 244, 0.93);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  color: var(--text-dark);
+}
+
+/* ─── Floating glass card (dark) ────────────────────────────── */
+.glass-panel {
+  background: rgba(12, 10, 6, 0.88);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border-radius: 28px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(212, 175, 55, 0.38);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+.glass-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+.glass-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.04); border-radius: 10px; }
+.glass-scroll::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.25); border-radius: 10px; }
+.glass-scroll::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.4); }
+
+/* ─── Animations ────────────────────────────────────────────── */
+@keyframes scrollDot {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(300%);  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+  50%       { opacity: 0.85; box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
+}

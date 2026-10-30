@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org', '@type': 'Person', name: profile.name,
           url: 'https://sudip-parajuli.com.np/', description: profile.description,
-          jobTitle: 'Director · Software Developer and AI Product Builder',
+          jobTitle: 'Director · Software and AI Product Builder · Business Growth and Digital Strategy Consultant',
           worksFor: { '@type': 'Organization', name: profile.business, url: 'https://www.techwiredsolutions.com.np/' },
           sameAs: ['https://github.com/sudip-parajuli', 'https://www.linkedin.com/in/sudip-parajuli-8073601a1', 'https://sudip-parajuli.linkypot.com/'],
           alumniOf: [{ '@type': 'CollegeOrUniversity', name: profile.college }, { '@type': 'CollegeOrUniversity', name: profile.university }],

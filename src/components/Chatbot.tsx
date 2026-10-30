@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-import { projects } from '@/data/portfolio';
+import { projects, clientWork, conceptWork } from '@/data/portfolio';
 
 type Message = { from: 'user' | 'bot'; text: string };
 
@@ -16,6 +16,8 @@ const SUGGESTIONS = [
 
 function getReply(input: string): string {
   const q = input.toLowerCase();
+  if (/consult|marketing|advertis|growth|client|graphic|branding|google business/.test(q)) return `Sudip is a Business Growth & Digital Strategy Consultant alongside his Director role at Techwired Solutions. For EasyMoto and ChillPill, his work spans business planning, marketing and advertising execution, and digital operations. His broader client work includes websites, social media graphics and Google Business Profiles. Businesses include ${clientWork.map(c => c.name).join(', ')}. See the Business & Client Work section for scope.`;
+  if (/sample|concept|redesign/.test(q)) return `The smaller redesign collection includes ${conceptWork.map(c => c.name).join(', ')}. These are independent sample concepts, not official business websites or commissioned launches. Expand Website redesign concepts below the client work.`;
   const project = projects.find(p => q.includes(p.name.toLowerCase()) || (p.name === 'LinkyPot' && /oneqrcard/.test(q)) || (p.name === 'ChillPill Gaming Cafe' && /chillpill|gaming cafe/.test(q)));
   if (project) return `${project.name}: ${project.description} ${project.focus} Status: ${project.status}. Explore: ${project.url}`;
   if (/education|experience|internship|insight|bca|college|university|degree|certificate|bootcamp/.test(q)) return 'Sudip completed his BCA at Araniko Multiple Campus, Tribhuvan University, in 2025; a three-month Python/Django backend development internship at Insight Workshop; and a Digital Marketing Bootcamp with a completion certificate provided by Budhanilkantha Municipality.';

@@ -193,8 +193,8 @@ export default function Contact() {
                   lineHeight: 1.8,
                   marginBottom: 32,
                 }}>
-                  For product collaborations, business websites, AI integrations and
-                  automation projects, let’s connect through Techwired Solutions.
+                  For product development, business growth consulting, websites, marketing,
+                  AI integrations and automation, let’s connect through Techwired Solutions.
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>

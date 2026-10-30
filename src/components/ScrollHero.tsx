@@ -12,7 +12,7 @@ const frameSrc = (n: number) => `/frames_v2/frame_${String(n).padStart(2, '0')}.
 const SCENES = [
   {
     id: 'hero', headline: ['From ideas', 'to useful', 'em:products.'],
-    subtitle: 'AI Product Builder · Creative Technologist · Indie Maker. I build web products, AI applications and business software from Kathmandu, Nepal.',
+    subtitle: 'Software & AI Product Builder · Business Growth Consultant · Director at Techwired Solutions. I build products and help businesses grow through technology, strategy and marketing.',
     rightType: 'meta', rightItems: [
       { label: 'DIRECTOR', value: 'Techwired Solutions' },
       { label: 'BASED IN', value: 'Kathmandu · Nepal' },
@@ -22,7 +22,7 @@ const SCENES = [
   },
   {
     id: 'about', headline: ['Curious mind.', 'Practical', 'em:builder.'],
-    subtitle: 'I like turning “what if?” into something people can actually use. As Director of Techwired Solutions, I combine software development, AI-assisted iteration and digital marketing to build useful digital experiences.',
+    subtitle: 'I turn ideas into products people can use. As Director of Techwired Solutions and a Business Growth & Digital Strategy Consultant, I work across product development, business planning, websites, branding, advertising and digital operations.',
     rightType: 'stats', rightItems: [
       { label: 'APPROACH', value: 'Idea → usable product' },
       { label: 'EDUCATION', value: 'BCA · completed 2025' },

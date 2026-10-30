@@ -8,7 +8,9 @@ I am Director of Techwired Solutions, a registered business in Budhanilkantha Mu
 
 ## Selected work
 
-LinkyPot (OneQRCard), EasyMoto, Dashain Cards, Krisearch, ChillPill Gaming Cafe, GharBari and Gym Engine. Project descriptions are based on their repository documentation. Live access does not imply every integration is production-ready. Dashain Cards is playable on the web and in Google Play internal testing; Gym Engine remains in active development.
+LinkyPot (OneQRCard), EasyMoto, Dashain Cards, Krisearch, ChillPill Gaming Cafe, GharBari, Gym Engine and StayWired (HotelManagementSaaS). Project descriptions are based on their repository documentation. Live access does not imply every integration is production-ready. Dashain Cards is playable on the web and in Google Play internal testing; Gym Engine remains in active development. StayWired's public demo uses fictional hotel data separate from live operations.
+
+Business Growth & Digital Strategy Consultant: business planning, marketing, advertising and digital operations work for EasyMoto and ChillPill, plus website/digital presence work for Amicus Institute of Law, Aryal Farm and KhelHub Nepal / अक्षरेखा मिडिया प्रा.लि. The client section distinguishes these engagements from products. A lower-priority expandable collection links six independent website redesign concepts; it does not present them as official client websites or commissioned launches.
 
 Education: BCA, Araniko Multiple Campus / Tribhuvan University, completed 2025. Professional development: Digital Marketing Bootcamp completion certificate provided by Budhanilkantha Municipality.
 
@@ -32,6 +34,7 @@ Open http://localhost:3000. The existing Vercel project deploys the main branch.
 - `src/data/portfolio.ts`: selected projects, URLs, release status and profile facts.
 - `src/components/ScrollHero.tsx`: four animated story scenes.
 - `src/components/Education.tsx`: education and professional development.
+- `src/components/ClientWork.tsx`: business consulting, client scope and expandable sample redesigns; data lives in `src/data/portfolio.ts`.
 - `src/components/Chatbot.tsx`: local, rule-based portfolio guide; no generative API or key required.
 - `src/components/SoundNarrator.tsx`: opt-in browser speech narration. Keep it consistent with visible content.
 - `src/components/Contact.tsx`: existing Web3Forms integration. Do not send test messages without authorization.

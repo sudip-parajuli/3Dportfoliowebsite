@@ -26,7 +26,9 @@ export default function Projects() {
         </div>
         <div className="business-note">
           <h3>Director · Techwired Solutions</h3>
-          <p>I lead Techwired Solutions, a registered business in Budhanilkantha Municipality, Nepal. My work combines software development, AI-assisted workflows and digital marketing to turn ideas into useful products and business websites.</p>
+          <p>I lead Techwired Solutions, a registered business in Budhanilkantha Municipality, Nepal. I build software products and help businesses grow through technology, strategy and marketing—from shaping an idea to delivering the work.</p>
+          <a href="#client-work">Business consulting & client work ↓</a>
+          <span aria-hidden="true"> · </span>
           <a href="https://www.techwiredsolutions.com.np/" target="_blank" rel="noopener noreferrer">Explore Techwired Solutions ↗</a>
         </div>
       </div>

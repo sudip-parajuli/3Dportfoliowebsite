@@ -6,7 +6,7 @@ const SECTIONS = [
   {
     id: 'hero',
     name: 'Introduction',
-    text: "Welcome. I am Sudip Parajuli, an AI product builder, creative technologist and indie maker based in Kathmandu, Nepal. I am Director of Techwired Solutions, a registered business in Budhanilkantha Municipality, where I lead software products and digital solutions."
+    text: "Welcome. I am Sudip Parajuli, a software and AI product builder, Business Growth and Digital Strategy Consultant, and Director of Techwired Solutions, a registered business in Budhanilkantha Municipality. I build products and help businesses grow through technology, strategy and marketing."
   },
   {
     id: 'about',
@@ -26,7 +26,12 @@ const SECTIONS = [
   {
     id: 'work',
     name: 'Projects',
-    text: "My selected projects are LinkyPot, my flagship digital business card and link platform; EasyMoto rental services; Dashain Cards; Krisearch; ChillPill Gaming Cafe; GharBari property listings; and Gym Engine, which remains in active development."
+    text: "My selected projects include LinkyPot, EasyMoto, Dashain Cards, Krisearch, ChillPill Gaming Cafe, GharBari, Gym Engine and StayWired hotel management SaaS. StayWired has a public interactive demo separate from live hotel operations."
+  },
+  {
+    id: 'client-work',
+    name: 'Business and Client Work',
+    text: "My consulting work with EasyMoto and ChillPill covers business planning, marketing, advertising and digital operations. I have also worked on websites and digital presence for Amicus Institute of Law, Aryal Farm and KhelHub Nepal. A smaller collection contains independent website redesign concepts."
   },
   {
     id: 'skills',

@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Sudip Parajuli',
-  title: 'AI Product Builder · Creative Technologist · Indie Maker',
-  description: 'Director of Techwired Solutions. Building useful web products, AI applications and business software from Kathmandu, Nepal.',
+  title: 'Software & AI Product Builder · Business Growth Consultant · Director at Techwired Solutions',
+  description: 'Software and AI product builder, business growth consultant and Director of Techwired Solutions. Building products and helping businesses grow through technology, strategy and marketing from Nepal.',
   role: 'Director',
   business: 'Techwired Solutions',
   education: 'Bachelor of Computer Applications (BCA)',
@@ -18,4 +18,22 @@ export const projects = [
   { name: 'ChillPill Gaming Cafe', category: 'Techwired Solutions', status: 'Live website & operations project', description: 'A gaming cafe website and staff console covering stations, session timing, waiting lists, billing and inventory.', focus: 'Brings public business information and staff workflows together. Booking enquiries use WhatsApp.', stack: ['JavaScript', 'Supabase', 'Realtime'], url: 'https://chillpill.com.np/', source: 'https://github.com/techwired-solutions/gaming-cafe', featured: false },
   { name: 'GharBari', category: 'Techwired Solutions', status: 'Live web platform', description: 'A bilingual property listing board for Nepal, with property offers and requests, photos, search, filters and shareable listing pages.', focus: 'Combines public discovery with administrator-managed listings and contact workflows.', stack: ['Next.js', 'TypeScript', 'Supabase'], url: 'https://gharbarnepal.vercel.app/', source: 'https://github.com/techwired-solutions/gharbari', featured: false },
   { name: 'Gym Engine', category: 'Fitness & operations', status: 'Active development · web preview', description: 'Fitness education, editable meal and exercise plans, personal progress tracking and a separate gym staff workspace.', focus: 'Connects public fitness learning with personal records and gym operations. Advanced integrations remain in development.', stack: ['Next.js', 'TypeScript', 'Supabase'], url: 'https://gym-engine.vercel.app/', source: 'https://github.com/sudip-parajuli/gym-engine', featured: false },
+  { name: 'StayWired', category: 'Hospitality SaaS', status: 'Live website & interactive demo', description: 'A hotel management SaaS connecting reservations, rooms, front desk, housekeeping and guest balances in a hospitality workspace.', focus: 'A Next.js interface with a multi-tenant Django operational backend. The public interactive demo uses fictional hotel data, separate from live hotel operations.', stack: ['Next.js', 'Django / DRF', 'PostgreSQL'], url: 'https://staywired.vercel.app/', source: 'https://github.com/sudip-parajuli/HotelManagementSaaS', featured: false },
+];
+
+export const clientWork = [
+  { name: 'EasyMoto Rental Services', url: 'https://www.easymoto.com.np/', scope: 'Business planning, growth strategy, marketing and advertising execution, digital presence and rental operations software.', role: 'Business Growth & Digital Strategy Consultant' },
+  { name: 'ChillPill Gaming Cafe', url: 'https://chillpill.com.np/', scope: 'Business planning, marketing and advertising execution, digital presence and gaming cafe operations software.', role: 'Business Growth & Digital Strategy Consultant' },
+  { name: 'Amicus Institute of Law', url: 'https://amicus.com.np/', scope: 'Website and digital presence work.', role: 'Website & Digital Creative Work' },
+  { name: 'Aryal Farm', url: 'https://aryalfarm.com.np/', scope: 'Website and digital presence work.', role: 'Website & Digital Creative Work' },
+  { name: 'KhelHub Nepal / अक्षरेखा मिडिया प्रा.लि.', url: 'https://www.khelhubnepal.com/', scope: 'News portal website and digital presence work.', role: 'Website & Digital Creative Work' },
+];
+
+export const conceptWork = [
+  { name: 'Paila Restro', category: 'Restaurant website concept', url: 'https://pailarestrosample-web.vercel.app/' },
+  { name: 'Sunkoshi Oasis', category: 'Five-star resort website concept', url: 'https://5starhotelsample.vercel.app/' },
+  { name: 'Kwality Beach Resort', category: 'Resort redesign concept', url: 'https://rbresortredesign.vercel.app/' },
+  { name: 'Durbar Palace', category: 'Wedding venue redesign concept', url: 'https://durbarpalacewebsiteredesignsample.vercel.app/' },
+  { name: 'Royal Basketball Academy', category: 'Sports academy website concept', url: 'https://royal-basketball-academy.vercel.app/' },
+  { name: 'Hotel Vinayak', category: 'Hotel redesign concept', url: 'https://hotelvinayakwebsiteredesign.vercel.app/' },
 ];

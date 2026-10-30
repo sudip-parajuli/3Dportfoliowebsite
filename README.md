@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sudip Parajuli — 3D Portfolio
 
-## Getting Started
+[Live portfolio](https://sudip-parajuli.com.np/) · [Techwired Solutions](https://www.techwiredsolutions.com.np/) · [Personal links](https://sudip-parajuli.linkypot.com/)
 
-First, run the development server:
+A scroll-driven portfolio for my software, AI and business projects. Built with Next.js 16, React, TypeScript, Tailwind CSS, GSAP and a canvas image sequence. Includes an optional browser speech tour, a local portfolio guide and a contact form.
 
-```bash
+I am Director of Techwired Solutions, a registered business in Budhanilkantha Municipality, Nepal.
+
+## Selected work
+
+LinkyPot (OneQRCard), EasyMoto, Dashain Cards, Krisearch, ChillPill Gaming Cafe, GharBari and Gym Engine. Project descriptions are based on their repository documentation. Live access does not imply every integration is production-ready. Dashain Cards is playable on the web and in Google Play internal testing; Gym Engine remains in active development.
+
+Education: BCA, Araniko Multiple Campus / Tribhuvan University, completed 2025. Professional development: Digital Marketing Bootcamp completion certificate provided by Budhanilkantha Municipality.
+
+Experience: completed a three-month Python/Django backend development internship at Insight Workshop. The internship year is omitted pending confirmation.
+
+## Development
+
+Use Node.js 24 and npm:
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build -- --webpack
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The existing Vercel project deploys the main branch.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Updating content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/data/portfolio.ts`: selected projects, URLs, release status and profile facts.
+- `src/components/ScrollHero.tsx`: four animated story scenes.
+- `src/components/Education.tsx`: education and professional development.
+- `src/components/Chatbot.tsx`: local, rule-based portfolio guide; no generative API or key required.
+- `src/components/SoundNarrator.tsx`: opt-in browser speech narration. Keep it consistent with visible content.
+- `src/components/Contact.tsx`: existing Web3Forms integration. Do not send test messages without authorization.
+- `src/app/layout.tsx`: search/social metadata; `public/frames_v2/`: existing canvas sequence.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Only feature existing, substantial projects. Keep planned products out of the selected work and distinguish previews/internal tests from public releases. Do not add unverified audience metrics or launch dates. Repository visibility may require GitHub access.

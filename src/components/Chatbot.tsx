@@ -2,11 +2,13 @@
 
 import { useState, useRef, useEffect } from 'react';
 
+import { projects } from '@/data/portfolio';
+
 type Message = { from: 'user' | 'bot'; text: string };
 
 const SUGGESTIONS = [
   "What's your tech stack?",
-  "Tell me about DigiLoop",
+  "Tell me about LinkyPot",
   "Are you available for work?",
   "What projects have you built?",
   "How can I contact you?",
@@ -14,27 +16,17 @@ const SUGGESTIONS = [
 
 function getReply(input: string): string {
   const q = input.toLowerCase();
-  if (/stack|tech|language|framework|use/i.test(q))
-    return "My core stack is Django (Python) for backends, Next.js + TypeScript for frontends, and PostgreSQL for databases. I also work with FastAPI, Tailwind CSS, GSAP, Docker, and Redis. On the AI side — LangChain, RAG pipelines, and the OpenAI API. 🛠️";
-  if (/digiloop|agency/i.test(q))
-    return "DigiLoop is the digital agency I co-founded in 2024 🚀. We build websites, branding, and AI-powered products for businesses across Nepal. Check us out at digi-loop.vercel.app — I lead all the technical work there.";
-  if (/available|hire|freelance|job|work|opportun/i.test(q))
-    return "Yes! I'm currently open to freelance projects and full-time opportunities. I work remotely from Kathmandu, Nepal. Best way to reach me is sparajuli802@gmail.com or via the contact form on this page. 📩";
-  if (/project|built|ship|portfolio|easymoto|amicus|gymsite/i.test(q))
-    return "I've shipped 8+ live projects! Highlights: EasyMoto (e-commerce, easymoto.com.np), Amicus (legal, amicus.com.np), TechWired Solutions, Aryal Farm, GymSite (GitHub), and DigiLoop itself. Scroll up to the Work section to see them all! 🎯";
-  if (/contact|email|reach|message|talk/i.test(q))
-    return "You can reach me at sparajuli802@gmail.com, or fill out the contact form just above! I'm also on LinkedIn (sudip-parajuli-8073601a1) and GitHub (github.com/sudip-parajuli). I typically reply within 24 hours. 📬";
-  if (/ai|machine learning|langchain|rag|gpt|openai/i.test(q))
-    return "I build with LangChain, RAG pipelines, vector databases, and the OpenAI API. I've worked on recommendation systems (content-based filtering with TF-IDF) and custom AI integrations for client products. 🤖";
-  if (/location|based|kathmandu|nepal|where/i.test(q))
-    return "I'm based in Kathmandu, Nepal 🇳🇵. I work fully remote and collaborate with clients globally. My timezone is NPT (UTC+5:45).";
-  if (/leetcode|dsa|algorithm|competitive/i.test(q))
-    return "I've solved 50+ LeetCode problems as part of my DSA practice. Find me at leetcode.com/u/sudip_parajuli/ 🧠";
-  if (/hello|hi|hey|greet|sup|yo/i.test(q))
-    return "Hey there! 👋 I'm Sudip's portfolio assistant. Ask me anything about his work, stack, availability, or projects!";
-  if (/bye|goodbye|thanks|thank/i.test(q))
-    return "Thanks for stopping by! Feel free to reach out at sparajuli802@gmail.com anytime. Have a great day! 🙌";
-  return "Good question! I'm best at answering about Sudip's tech stack, projects, DigiLoop, availability, and how to contact him. What would you like to know? 😊";
+  const project = projects.find(p => q.includes(p.name.toLowerCase()) || (p.name === 'LinkyPot' && /oneqrcard/.test(q)) || (p.name === 'ChillPill Gaming Cafe' && /chillpill|gaming cafe/.test(q)));
+  if (project) return `${project.name}: ${project.description} ${project.focus} Status: ${project.status}. Explore: ${project.url}`;
+  if (/education|experience|internship|insight|bca|college|university|degree|certificate|bootcamp/.test(q)) return 'Sudip completed his BCA at Araniko Multiple Campus, Tribhuvan University, in 2025; a three-month Python/Django backend development internship at Insight Workshop; and a Digital Marketing Bootcamp with a completion certificate provided by Budhanilkantha Municipality.';
+  if (/techwired|business|agency|director|leadership/.test(q)) return 'Sudip is Director of Techwired Solutions, a registered business in Budhanilkantha Municipality, Nepal. He leads its software products, client websites and digital solutions. Explore https://www.techwiredsolutions.com.np/ and https://github.com/techwired-solutions.';
+  if (/play store|google play|android|mobile|game/.test(q)) return 'Dashain Cards is playable on the web and currently in Google Play internal testing. There is no public Play Store download link listed yet.';
+  if (/project|built|ship|portfolio/.test(q)) return `Selected work: ${projects.map(p => p.name).join(', ')}. LinkyPot is the flagship. Each project card includes its current status, website and repository.`;
+  if (/stack|language|framework|tools|technology/.test(q)) return 'Sudip works with Next.js, React, TypeScript, Python, Django, Django REST Framework and Supabase/PostgreSQL. His projects also include Gemini integrations, Android web companions and Expo staff tools.';
+  if (/ai|agriculture|automation/.test(q)) return 'Sudip is interested in practical AI, automation and modern agriculture. Krisearch combines agricultural information for Nepal with an English/Nepali AI assistant. This portfolio guide answers from the information on this site.';
+  if (/contact|email|reach|available|hire|work|collaborat/.test(q)) return 'For product collaborations, websites, software or automation projects, email sparajuli802@gmail.com or use the contact form. More links: https://sudip-parajuli.linkypot.com/';
+  if (/location|based|where|nepal/.test(q)) return 'Sudip is based in Kathmandu, Nepal (UTC+5:45).';
+  return 'I’m a guide to Sudip’s portfolio. Ask about LinkyPot, his selected projects, Techwired Solutions, education, app release status or contact details.';
 }
 
 export default function Chatbot() {
@@ -84,9 +76,9 @@ export default function Chatbot() {
 
       {/* Chat panel */}
       {open && (
-        <div style={{
-          position: 'fixed', bottom: 96, right: 28, zIndex: 999,
-          width: 360, height: 480, maxHeight: 520,
+        <div role="dialog" aria-label="Portfolio guide" onKeyDown={e => { if (e.key === 'Escape') setOpen(false); }} style={{
+          position: 'fixed', bottom: 96, right: 20, zIndex: 999,
+          width: 'min(360px, calc(100vw - 40px))', height: 480, maxHeight: 'calc(100dvh - 128px)',
           background: 'rgba(15,15,15,0.92)',
           backdropFilter: 'blur(24px)',
           border: '1px solid rgba(212,175,55,0.25)',
@@ -100,10 +92,10 @@ export default function Chatbot() {
           <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', gap: 10 }}>
             <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #d4af37, #b89327)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16 }}>🤖</div>
             <div>
-              <div style={{ color: '#fff', fontSize: 14, fontWeight: 500 }}>Sudip&apos;s Assistant</div>
+              <div style={{ color: '#fff', fontSize: 14, fontWeight: 500 }}>Portfolio guide</div>
               <div style={{ color: '#d4af37', fontSize: 11, display: 'flex', alignItems: 'center', gap: 4 }}>
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#d4af37', display: 'inline-block' }} />
-                Online
+                About Sudip’s work
               </div>
             </div>
           </div>
@@ -159,14 +151,15 @@ export default function Chatbot() {
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && send(input)}
-              placeholder="Ask me anything…"
+              placeholder="Ask about Sudip’s work…"
+              aria-label="Question for portfolio guide"
               style={{
-                flex: 1, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)',
+                flex: 1, minWidth: 0, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: 12, padding: '10px 14px', color: '#fff', fontSize: 13,
                 outline: 'none', fontFamily: 'inherit',
               }}
             />
-            <button onClick={() => send(input)} style={{
+            <button aria-label="Send question" onClick={() => send(input)} style={{
               background: '#d4af37', border: 'none', borderRadius: 12,
               width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer', fontSize: 16, flexShrink: 0, color: '#000000', fontWeight: 600,

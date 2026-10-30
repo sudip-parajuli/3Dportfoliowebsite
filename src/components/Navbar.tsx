@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const NAV_ITEMS = ['About', 'Work', 'Journey', 'Skills', 'Contact'];
+const NAV_ITEMS = ['About', 'Work', 'Education', 'Skills', 'Contact'];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -160,6 +160,8 @@ export default function Navbar() {
           className="navbar-hamburger"
           onClick={() => setMenuOpen(o => !o)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           <span className={`hamburger-line${menuOpen ? ' open-1' : ''}`} />
           <span className={`hamburger-line${menuOpen ? ' open-2' : ''}`} />
@@ -168,7 +170,7 @@ export default function Navbar() {
       </nav>
 
       {/* ── Mobile Drawer ── */}
-      <div className={`navbar-drawer${menuOpen ? ' open' : ''}`}>
+      <div id="mobile-navigation" inert={!menuOpen} className={`navbar-drawer${menuOpen ? ' open' : ''}`}>
         {NAV_ITEMS.map(item => (
           <a
             key={item}

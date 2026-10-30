@@ -6,37 +6,37 @@ const SECTIONS = [
   {
     id: 'hero',
     name: 'Introduction',
-    text: "Hi, welcome to my portfolio website. I am Sudip Parajuli, a fullstack developer and AI builder based in Kathmandu, Nepal. I co founded DigiLoop, a digital agency here in Nepal. I focus on building scalable Django backends, modern Next.js frontends, and custom AI integrations. Let me guide you through my work and journey."
+    text: "Welcome. I am Sudip Parajuli, an AI product builder, creative technologist and indie maker based in Kathmandu, Nepal. I am Director of Techwired Solutions, a registered business in Budhanilkantha Municipality, where I lead software products and digital solutions."
   },
   {
     id: 'about',
     name: 'About Me',
-    text: "About me. I'm a fullstack developer from Kathmandu. Through DigiLoop, my agency, we deliver end to end digital solutions, custom websites, and AI systems. I have over two years of experience, worked with five clients, and shipped more than eight live projects. I also enjoy solving data structure problems on LeetCode in my free time."
+    text: "I turn what if into products people can use. My interests connect software development, AI, automation, entrepreneurship and agriculture."
   },
   {
     id: 'journey',
     name: 'The Journey',
-    text: "Let me share my journey. I call it the builder's journey. It started in 2022 when I did freelance Django work. Since then, I've built websites for clients, co-founded DigiLoop, delivered our flagship e-commerce platform EasyMoto, created custom AI products, and built various web systems leading up to today."
+    text: "I completed my Bachelor of Computer Applications at Araniko Multiple Campus, Tribhuvan University, in 2025. I completed a three month Python and Django backend development internship at Insight Workshop, and a Digital Marketing Bootcamp with a certificate provided by Budhanilkantha Municipality."
   },
   {
     id: 'build',
     name: 'Current Focus',
-    text: "Here is what I'm building today. I'm focusing on AI-powered products and scalable digital systems. This includes leading our agency DigiLoop, designing LLM agents and automation workflows, writing fullstack code in Django and Next.js, and scaling products from Nepal to global markets."
+    text: "My current focus is improving useful products, exploring agriculture and AI through Krisearch, and testing Dashain Cards for Android. Dashain Cards is currently in Google Play internal testing."
   },
   {
     id: 'work',
     name: 'Projects',
-    text: "Here is some of the work I have co-created and shipped. These are displayed on a clean white background with frosted glass cards. EasyMoto is an automotive e-commerce platform. DigiLoop is our agency site. Amicus is a legal services website, TechWired is a corporate technology site, Aryal Farm is for agriculture, and GymSite is a fitness app."
+    text: "My selected projects are LinkyPot, my flagship digital business card and link platform; EasyMoto rental services; Dashain Cards; Krisearch; ChillPill Gaming Cafe; GharBari property listings; and Gym Engine, which remains in active development."
   },
   {
     id: 'skills',
     name: 'Skills & Stack',
-    text: "On the backend, my main tools are Django and FastAPI. For frontend work, I use Next.js, React, TypeScript, and Tailwind CSS. I also build AI agents using LangChain, and manage deployments with Docker and Nginx."
+    text: "My tools include Python, Django, Django REST Framework, Next.js, React, TypeScript, Supabase and PostgreSQL. I also work with AI integrations and AI-assisted development."
   },
   {
     id: 'contact',
     name: 'Contact',
-    text: "Let's build something useful! If you want to collaborate, hire me, or just chat, feel free to reach out. I am open to freelance work, full-time positions, or startup collaborations. You can use this contact form to send me a message directly, or email me at sparajuli802 at gmail dot com. Thank you for visiting!"
+    text: "For product collaborations, business websites or automation projects, use the contact form or email sparajuli802 at gmail dot com. Thank you for visiting."
   }
 ];
 

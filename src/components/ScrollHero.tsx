@@ -11,54 +11,46 @@ const frameSrc = (n: number) => `/frames_v2/frame_${String(n).padStart(2, '0')}.
 
 const SCENES = [
   {
-    id: 'hero',
-    headline: ['Building', 'systems that', 'em:scale.'],
-    subtitle: 'Co-founder of DigiLoop. Django backends, Next.js frontends, and AI-powered products — crafted from Kathmandu.',
-    rightType: 'meta',
-    rightItems: [
-      { label: 'CURRENTLY', value: 'Building DigiLoop v2' },
-      { label: 'BASED IN',  value: 'Kathmandu · Nepal' },
-      { label: 'STACK',     value: 'Django · Next.js · AI' },
-      { label: 'OPEN TO',   value: 'Freelance · Full-time' },
+    id: 'hero', headline: ['From ideas', 'to useful', 'em:products.'],
+    subtitle: 'AI Product Builder · Creative Technologist · Indie Maker. I build web products, AI applications and business software from Kathmandu, Nepal.',
+    rightType: 'meta', rightItems: [
+      { label: 'DIRECTOR', value: 'Techwired Solutions' },
+      { label: 'BASED IN', value: 'Kathmandu · Nepal' },
+      { label: 'FLAGSHIP PRODUCT', value: 'LinkyPot / OneQRCard' },
+      { label: 'FOCUS', value: 'Software · AI · Automation' },
     ]
   },
   {
-    id: 'about',
-    headline: ['Fullstack', 'dev &', 'em:co-founder.'],
-    subtitle: "I'm Sudip Parajuli — a fullstack developer from Kathmandu, Nepal. Focused on building scalable backend architectures and AI-driven systems. Co-founded DigiLoop to deliver end-to-end digital agency solutions.",
-    rightType: 'stats',
-    rightItems: [
-      { label: 'LIVE PROJECTS', value: '8+' },
-      { label: 'YEARS BUILDING',  value: '2+' },
-      { label: 'CLIENTS SERVED',     value: '5+ via DigiLoop' },
-      { label: 'LEETCODE SOLVED',   value: '50+ (DSA)' },
+    id: 'about', headline: ['Curious mind.', 'Practical', 'em:builder.'],
+    subtitle: 'I like turning “what if?” into something people can actually use. As Director of Techwired Solutions, I combine software development, AI-assisted iteration and digital marketing to build useful digital experiences.',
+    rightType: 'stats', rightItems: [
+      { label: 'APPROACH', value: 'Idea → usable product' },
+      { label: 'EDUCATION', value: 'BCA · completed 2025' },
+      { label: 'BUSINESS', value: 'Techwired Solutions' },
+      { label: 'INTEREST', value: 'AI for agriculture' },
     ]
   },
   {
-    id: 'journey',
-    headline: ["The Builder's", 'em:Journey.'],
-    subtitle: 'A timeline of learning, building, co-founding, and launching products.',
-    rightType: 'timeline',
-    rightItems: [
-      { year: '2022', text: 'Started freelancing' },
-      { year: 'Built', text: 'websites for clients' },
-      { year: 'Co-founded', text: 'DigiLoop Agency' },
-      { year: 'Built', text: 'EasyMoto Platform' },
-      { year: 'Created', text: 'custom AI products' },
-      { year: 'Today', text: 'Building DigiLoop v2' },
+    id: 'journey', headline: ['Learning.', 'Building.', 'em:Growing.'],
+    subtitle: 'A foundation in computer applications, practical business software and a growing interest in AI for Nepal’s agricultural communities.',
+    rightType: 'timeline', rightItems: [
+      { year: '2025', text: 'BCA completed · Tribhuvan University' },
+      { year: 'Internship', text: 'Python / Django · Insight Workshop' },
+      { year: 'Learned', text: 'Digital Marketing Bootcamp' },
+      { year: 'Built', text: 'LinkyPot & business platforms' },
+      { year: 'Exploring', text: 'Agriculture + AI through Krisearch' },
+      { year: 'Testing', text: 'Dashain Cards on Google Play' },
     ]
   },
   {
-    id: 'build-today',
-    headline: ['Building', 'AI & digital', 'em:systems.'],
-    subtitle: 'Currently focused on DigiLoop, AI applications, automation workflows, and products that solve real-world problems.',
-    rightType: 'culmination',
-    rightItems: [
-      { label: 'DIGILOOP', value: 'Co-founding agency' },
-      { label: 'AI PRODUCTS', value: 'LLM agents & automation' },
-      { label: 'FULLSTACK', value: 'Django, FastAPI, Next.js' },
-      { label: 'AUTOMATION', value: 'Workflows & scripts' },
-      { label: 'NEPAL → GLOBAL', value: 'Scaling products' },
+    id: 'build-today', headline: ['Software.', 'AI.', 'em:Possibilities.'],
+    subtitle: 'Improving the products I have built, connecting AI with useful workflows and bringing Dashain Cards from the web to Android.',
+    rightType: 'culmination', rightItems: [
+      { label: 'LINKYPOT', value: 'Digital identity & business pages' },
+      { label: 'EASYMOTO', value: 'Rental business workflows' },
+      { label: 'KRISEARCH', value: 'Agriculture & bilingual AI' },
+      { label: 'DASHAIN CARDS', value: 'Google Play internal testing' },
+      { label: 'TECHWIRED', value: 'Products & client solutions' },
     ]
   }
 ] as const;
@@ -336,7 +328,9 @@ export default function ScrollHero() {
 
           {/* Stacked Interactive Overlay Scenes */}
           <div style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
-            {SCENES.map((scene, idx) => (
+            {SCENES.map((scene, idx) => {
+              const Heading = idx === 0 ? 'h1' : 'h2';
+              return (
               <div
                 key={scene.id}
                 ref={el => { sceneRefs.current[idx] = el; }}
@@ -379,7 +373,7 @@ export default function ScrollHero() {
                         borderRadius: 50, padding: '7px 18px',
                         color: 'rgba(255,255,255,0.5)', fontSize: 11, letterSpacing: 1.5,
                       }}>
-                        SUDIP PARAJULI · FULLSTACK DEV
+                        SUDIP PARAJULI · PRODUCT BUILDER
                       </span>
                     </div>
                   ) : (
@@ -392,7 +386,7 @@ export default function ScrollHero() {
                   )}
 
                   {/* Staggered headline lines */}
-                  <h1
+                  <Heading
                     style={{
                       fontSize: 'clamp(38px, 5.8vw, 76px)',
                       fontWeight: 700,
@@ -418,7 +412,7 @@ export default function ScrollHero() {
                         </span>
                       );
                     })}
-                  </h1>
+                  </Heading>
 
                   {/* Subtitle text */}
                   <p
@@ -431,6 +425,7 @@ export default function ScrollHero() {
                   >
                     {scene.subtitle}
                   </p>
+                  {scene.id === 'hero' && <div className="hero-actions"><a href="#work">Explore selected work ↗</a><a href="#contact">Let’s talk</a></div>}
                 </div>
 
                 {/* ── RIGHT METADATA PANEL ── */}
@@ -527,7 +522,8 @@ export default function ScrollHero() {
                 </div>
 
               </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* ── SCROLL TO EXPLORE INDICATOR ── */}

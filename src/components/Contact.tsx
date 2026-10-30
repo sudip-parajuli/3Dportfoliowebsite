@@ -193,8 +193,8 @@ export default function Contact() {
                   lineHeight: 1.8,
                   marginBottom: 32,
                 }}>
-                  Available for freelance projects, full-time roles, and startup
-                  collaborations. Co-building DigiLoop — Nepal&apos;s emerging digital agency.
+                  For product collaborations, business websites, AI integrations and
+                  automation projects, let’s connect through Techwired Solutions.
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -202,7 +202,7 @@ export default function Contact() {
                     { icon: '✉️', label: 'sparajuli802@gmail.com',   href: 'mailto:sparajuli802@gmail.com' },
                     { icon: '💼', label: 'LinkedIn',                  href: 'https://www.linkedin.com/in/sudip-parajuli-8073601a1' },
                     { icon: '🐙', label: 'github.com/sudip-parajuli', href: 'https://github.com/sudip-parajuli' },
-                    { icon: '🚀', label: 'DigiLoop Agency',           href: 'https://digi-loop.vercel.app' },
+                    { icon: '🚀', label: 'Techwired Solutions',           href: 'https://www.techwiredsolutions.com.np/' },
                   ].map(({ icon, label, href }) => (
                     <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                       className="contact-link"

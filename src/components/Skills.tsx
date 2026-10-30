@@ -7,101 +7,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const SKILLS: Record<string, { items: string[] }> = {
-  Backend: {
-    items: [
-      'Python',
-      'Django',
-      'Django REST Framework',
-      'FastAPI',
-      'PostgreSQL',
-      'MySQL',
-      'SQLite',
-      'REST APIs',
-      'JWT Authentication',
-    ],
-  },
-
-  Frontend: {
-    items: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Tailwind CSS',
-      'GSAP',
-      'Framer Motion',
-      'HTML5',
-      'CSS3',
-    ],
-  },
-
-  'AI Engineering': {
-    items: [
-      'OpenAI API',
-      'LangChain',
-      'LangGraph',
-      'RAG Systems',
-      'AI Agents',
-      'Prompt Engineering',
-      'Vector Databases',
-      'Scikit-learn',
-      'Pandas',
-    ],
-  },
-
-  DevOps: {
-    items: [
-      'Docker',
-      'Git',
-      'GitHub Actions',
-      'Linux',
-      'Nginx',
-      'Apache',
-      'Vercel',
-      'Render',
-    ],
-  },
+  Backend: { items: ['Python', 'Django', 'Django REST Framework', 'REST APIs', 'PostgreSQL', 'Supabase', 'SQLite'] },
+  Frontend: { items: ['Next.js', 'React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'GSAP', 'HTML & CSS'] },
+  'AI & Automation': { items: ['Gemini integrations', 'AI-assisted development', 'Prompt design', 'Python workflows', 'Scheduled publishing', 'Remotion'] },
+  'Delivery & Business': { items: ['Git', 'GitHub Actions', 'Vercel', 'Expo staff apps', 'Android WebView', 'Digital marketing'] },
 };
 
-const AI_TOOLS = [
-  // LLMs
-  'ChatGPT',
-  'Claude',
-  'Gemini',
-  'DeepSeek',
-  'Groq',
-  'Qwen',
-
-  // AI Frameworks
-  'LangChain',
-  'LangGraph',
-  'CrewAI',
-  'Flowise',
-
-  // Automation
-  'n8n',
-  'Make',
-
-  // Vector Databases
-  'Pinecone',
-  'ChromaDB',
-
-  // AI Media
-  'Midjourney',
-  'ElevenLabs',
-  'HeyGen',
-  'DALL-E 3',
-  'Flux 1.1 Pro',
-  'Runway Gen-3',
-  'Suno AI',
-  'Kling AI',
-  'Google Veo',
-
-  // Design & Productivity
-  'Figma',
-  'Canva',
-  'Adobe Express',
-] as const;
+const AI_TOOLS = ['ChatGPT', 'Claude', 'Gemini', 'Figma', 'Canva'] as const;
 
 export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);

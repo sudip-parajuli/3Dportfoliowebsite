@@ -29,6 +29,11 @@ const SECTIONS = [
     text: "My selected projects include LinkyPot, EasyMoto, Dashain Cards, Krisearch, ChillPill Gaming Cafe, GharBari, Gym Engine and StayWired hotel management SaaS. StayWired has a public interactive demo separate from live hotel operations."
   },
   {
+    id: 'automation',
+    name: 'Social Media Automation',
+    text: "FootyBitez connects football topics, AI assisted scripting, narration, captions and Remotion video rendering with publishing workflows. Trending Today collects RSS news, prepares Nepali captions and branded image cards, and coordinates social publishing and a daily digest. Each project includes repository and social channel links."
+  },
+  {
     id: 'client-work',
     name: 'Business and Client Work',
     text: "My consulting work with EasyMoto and ChillPill covers business planning, marketing, advertising and digital operations. I have also worked on websites and digital presence for Amicus Institute of Law, Aryal Farm and KhelHub Nepal. A smaller collection contains independent website redesign concepts."

@@ -2,6 +2,7 @@ import Navbar        from '@/components/Navbar';
 import ScrollHero    from '@/components/ScrollHero';
 import Education from '@/components/Education';
 import ClientWork from '@/components/ClientWork';
+import AutomationWork from '@/components/AutomationWork';
 import Projects      from '@/components/Projects';
 import Skills        from '@/components/Skills';
 import Contact       from '@/components/Contact';
@@ -18,6 +19,7 @@ export default function Home() {
       {/* Content sections — sit above the fixed canvas via z-index */}
       <main style={{ position: 'relative', zIndex: 1 }}>
         <Projects />
+        <AutomationWork />
         <ClientWork />
         <Education />
         <Skills />

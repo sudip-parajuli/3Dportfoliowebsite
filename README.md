@@ -18,6 +18,8 @@ Experience: completed a three-month Python/Django backend development internship
 
 ## Development
 
+The dedicated automation section features FootyBitez (`football-shorts-automation`: Python/Remotion football video workflows) and Trending Today (`news-automation`: Nepali captions, branded image cards, social publishing and daily digests). Cards include the repository and supplied social channel links. They describe the pipelines without claiming uninterrupted publishing or audience metrics.
+
 Use Node.js 24 and npm:
 
 ```sh
@@ -35,6 +37,7 @@ Open http://localhost:3000. The existing Vercel project deploys the main branch.
 - `src/components/ScrollHero.tsx`: four animated story scenes.
 - `src/components/Education.tsx`: education and professional development.
 - `src/components/ClientWork.tsx`: business consulting, client scope and expandable sample redesigns; data lives in `src/data/portfolio.ts`.
+- `src/components/AutomationWork.tsx`: AI/social publishing projects and channel links, sourced from `automationProjects` in the shared data file.
 - `src/components/Chatbot.tsx`: local, rule-based portfolio guide; no generative API or key required.
 - `src/components/SoundNarrator.tsx`: opt-in browser speech narration. Keep it consistent with visible content.
 - `src/components/Contact.tsx`: existing Web3Forms integration. Do not send test messages without authorization.

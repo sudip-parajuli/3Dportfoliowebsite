@@ -7,6 +7,7 @@ export default function Projects() {
         <span className="section-eyebrow">Selected work · personal & Techwired Solutions</span>
         <h2 className="section-heading">Products with a purpose.</h2>
         <p className="section-intro">A focused selection of my strongest projects: software for sharing an identity, running a business, connecting communities and playing together.</p>
+        <div className="work-shortcuts"><a href="#automation">AI & social media automation ↓</a><a href="#client-work">Business & client work ↓</a></div>
         <div className="selected-projects">
           {projects.map(project => (
             <article key={project.name} className={`selected-project ${project.featured ? 'flagship-project' : ''}`}>

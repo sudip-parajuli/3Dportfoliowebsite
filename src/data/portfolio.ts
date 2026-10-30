@@ -37,3 +37,29 @@ export const conceptWork = [
   { name: 'Royal Basketball Academy', category: 'Sports academy website concept', url: 'https://royal-basketball-academy.vercel.app/' },
   { name: 'Hotel Vinayak', category: 'Hotel redesign concept', url: 'https://hotelvinayakwebsiteredesign.vercel.app/' },
 ];
+
+export const automationProjects = [
+  {
+    name: 'FootyBitez', category: 'Football media automation',
+    description: 'A Python and Remotion pipeline connecting football topics, AI-assisted scripts, narration, visual assets, timed captions, video rendering and scheduled publishing workflows.',
+    workflow: ['Topic selection', 'Script & narration', 'Captions & video rendering', 'Publishing workflows'],
+    stack: ['Python', 'React / Remotion', 'FFmpeg', 'GitHub Actions'],
+    links: [
+      { label: 'Repository', url: 'https://github.com/sudip-parajuli/football-shorts-automation' },
+      { label: 'YouTube', url: 'https://www.youtube.com/@footybitez' },
+      { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61560218035312' },
+      { label: 'Instagram', url: 'https://www.instagram.com/footybitez/' },
+    ],
+  },
+  {
+    name: 'Trending Today', category: 'Nepali news automation',
+    description: 'A news workflow that collects RSS sources, tracks previously processed items, prepares Nepali captions and branded image cards, and coordinates scheduled Facebook and Instagram publishing with a daily digest.',
+    workflow: ['RSS collection', 'History & story selection', 'Nepali captions & image cards', 'Publishing & daily digest'],
+    stack: ['Python', 'RSS feeds', 'Gemini / Groq', 'GitHub Actions'],
+    links: [
+      { label: 'Repository', url: 'https://github.com/sudip-parajuli/news-automation' },
+      { label: 'Facebook', url: 'https://www.facebook.com/ontrending24' },
+      { label: 'Instagram', url: 'https://www.instagram.com/ontrendingtoday/' },
+    ],
+  },
+];

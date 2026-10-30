@@ -118,6 +118,12 @@ button {
 .project-stack span { font-size: 11px; padding: 5px 9px; border: 1px solid #e7dfcc; border-radius: 7px; }
 .project-links { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 24px; }
 .private-source { color: #736b5d; font-size: 12px; }
+.work-shortcuts { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: -12px 0 32px; font-size: 13px; color: #725713; }
+.work-shortcuts a { text-decoration: underline; text-underline-offset: 5px; }
+.automation-section { background: #fcfaf5; }
+.automation-card { background: #fff; }
+.automation-workflow { display: grid; gap: 10px; list-style: decimal; padding: 8px 0 22px 20px; color: #74602f; font-size: 12px; line-height: 1.6; }
+.automation-card .project-links { gap: 16px 22px; }
 .project-links a, .business-note a { color: #725713; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
 .selected-project small { color: #736b5d; margin-top: 20px; font-size: 11px; }
 .business-note { margin-top: 38px; padding: 28px 0 0; border-top: 1px solid #e7dfcc; }

@@ -10,6 +10,11 @@ export const profile = {
   completionYear: '2025',
 };
 
+export const recentProjects = [
+  { name: 'Vanshavali / वंशावली', category: 'Genealogy · formerly FamTree', status: 'Web app available · mobile in development', description: 'A bilingual family genealogy app with interactive family charts, member profiles, photos, BS/AD dates and a relationship finder between two family members.', focus: 'Shared web/Android interface, owner/editor/viewer permissions, multiple chart layouts and PDF/image tree exports.', stack: ['React / TypeScript', 'Capacitor', 'Cloudflare Workers / D1'], url: 'https://vanshavali.techwiredsolutions.com.np/', action: 'Explore Vanshavali' },
+  { name: 'BizzTracker', category: 'Modular business platform', status: 'Web preview · mobile in development', description: 'A mobile-first business workspace for sales, invoices, inventory, expenses, resource sessions and reporting, with businesses, branches and role-based access.', focus: 'Expo/React Native with a Hono/PostgreSQL API and offline command handling. Explore the browser preview while the mobile app and production rollout are in development.', stack: ['Expo / React Native', 'TypeScript / Hono', 'PostgreSQL'], url: 'https://bizztracker-preview.s-techwired.workers.dev/', action: 'Explore browser preview' },
+];
+
 export const projects = [
   { name: 'LinkyPot', category: 'Flagship product', status: 'Live web product', description: 'Digital business cards, link-in-bio pages and small-business storefronts. Share contact details, services and links through a URL, QR code or NFC card.', focus: 'Public pages, card editors, business workspaces and customer enquiries in one product.', stack: ['Next.js', 'TypeScript', 'Supabase'], url: 'https://linkypot.com/', source: 'https://github.com/sudip-parajuli/OneQRCard', featured: true },
   { name: 'EasyMoto', category: 'Business operations', status: 'Live website', description: 'A motorcycle and scooter rental service with fleet browsing, customer and host workflows, booking requests and an administrative portal.', focus: 'Connects a customer-facing Django website with rental operations and an Expo staff app.', stack: ['Django', 'Python', 'Expo'], url: 'https://www.easymoto.com.np/', source: 'https://github.com/sudip-parajuli/bike_rental_service', featured: false },
@@ -39,6 +44,13 @@ export const conceptWork = [
 ];
 
 export const automationProjects = [
+  {
+    name: 'Atmospheric Horror Automation', category: 'Techwired Solutions · storytelling workflows',
+    description: 'A Python and Remotion system for original horror fiction, with separate long-form video, Shorts and Facebook/Instagram publishing workflows. Combines script preparation, narration, stock media, ambient audio and rendering.',
+    workflow: ['Story & script preparation', 'Narration & visual assets', 'Long-form / Shorts rendering', 'Social cards & publishing receipts'],
+    stack: ['Python', 'React / Remotion', 'FFmpeg', 'GitHub Actions'],
+    links: [{ label: 'Repository', url: 'https://github.com/techwired-solutions/horror_story_youtube_automation' }],
+  },
   {
     name: 'FootyBitez', category: 'Football media automation',
     description: 'A Python and Remotion pipeline connecting football topics, AI-assisted scripts, narration, visual assets, timed captions, video rendering and scheduled publishing workflows.',

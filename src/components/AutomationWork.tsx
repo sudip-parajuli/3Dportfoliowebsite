@@ -6,7 +6,7 @@ export default function AutomationWork() {
       <div className="portfolio-container">
         <span className="section-eyebrow">AI & social media automation</span>
         <h2 className="section-heading">From content to workflow.</h2>
-        <p className="section-intro">Two projects connecting code, AI-assisted content creation and social media publishing. They bring my software development and digital marketing work together.</p>
+        <p className="section-intro">Projects connecting code, AI-assisted content creation and social media publishing. They bring my software development and digital marketing work together.</p>
         <div className="selected-projects">
           {automationProjects.map(project => (
             <article className="selected-project automation-card" key={project.name}>

@@ -44,7 +44,7 @@ const SCENES = [
   },
   {
     id: 'build-today', headline: ['Software.', 'AI.', 'em:Possibilities.'],
-    subtitle: 'Improving the products I have built, connecting AI with useful workflows and bringing Dashain Cards from the web to Android.',
+    subtitle: 'Building Vanshavali for family relationships and BizzTracker for business operations, while improving my web products, Android apps and media automation workflows.',
     rightType: 'culmination', rightItems: [
       { label: 'LINKYPOT', value: 'Digital identity & business pages' },
       { label: 'EASYMOTO', value: 'Rental business workflows' },
@@ -425,7 +425,7 @@ export default function ScrollHero() {
                   >
                     {scene.subtitle}
                   </p>
-                  {scene.id === 'hero' && <div className="hero-actions"><a href="#work">Explore selected work ↗</a><a href="#contact">Let’s talk</a></div>}
+                  {scene.id === 'hero' && <div className="hero-actions"><a href="#recent-work">See recent projects ↗</a><a href="#work">Selected work</a><a href="#contact">Let’s talk</a></div>}
                 </div>
 
                 {/* ── RIGHT METADATA PANEL ── */}

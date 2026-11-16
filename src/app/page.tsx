@@ -3,21 +3,21 @@ import ScrollHero    from '@/components/ScrollHero';
 import Education from '@/components/Education';
 import ClientWork from '@/components/ClientWork';
 import AutomationWork from '@/components/AutomationWork';
+import RecentWork from '@/components/RecentWork';
 import Projects      from '@/components/Projects';
 import Skills        from '@/components/Skills';
 import Contact       from '@/components/Contact';
 import Chatbot       from '@/components/Chatbot';
-import SoundNarrator from '@/components/SoundNarrator';
 
 export default function Home() {
   return (
     <>
-      <SoundNarrator />
       <Navbar />
       {/* Canvas background + storytelling intro */}
       <ScrollHero />
       {/* Content sections — sit above the fixed canvas via z-index */}
       <main style={{ position: 'relative', zIndex: 1 }}>
+        <RecentWork />
         <Projects />
         <AutomationWork />
         <ClientWork />

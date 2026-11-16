@@ -226,7 +226,7 @@ export default function Contact() {
                     <div style={{ fontSize: 40, marginBottom: 16 }}>🎉</div>
                     <h3 style={{ color: gold, fontSize: 20, marginBottom: 8, fontWeight: 400 }}>Message sent!</h3>
                     <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}>
-                      Thanks! I&apos;ll get back to you within 24 hours.
+                      Thanks! I&apos;ll get back to you as soon as I can.
                     </p>
                     <button
                       onClick={() => setStatus('idle')}
@@ -246,9 +246,9 @@ export default function Contact() {
                     {/* Name + Email row */}
                     <div className="contact-name-email">
                       <div>
-                        <label style={labelStyle}>Name</label>
+                        <label htmlFor="contact-name" style={labelStyle}>Name</label>
                         <input
-                          required value={form.name}
+                          id="contact-name" autoComplete="name" required value={form.name}
                           onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                           placeholder="Your name"
                           style={inputStyle}
@@ -257,9 +257,9 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label style={labelStyle}>Email</label>
+                        <label htmlFor="contact-email" style={labelStyle}>Email</label>
                         <input
-                          required type="email" value={form.email}
+                          id="contact-email" autoComplete="email" required type="email" value={form.email}
                           onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                           placeholder="your@email.com"
                           style={inputStyle}
@@ -271,9 +271,9 @@ export default function Contact() {
 
                     {/* Message */}
                     <div>
-                      <label style={labelStyle}>Message</label>
+                      <label htmlFor="contact-message" style={labelStyle}>Message</label>
                       <textarea
-                        required value={form.message}
+                        id="contact-message" required value={form.message}
                         onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                         placeholder="Tell me about your project…"
                         rows={6}

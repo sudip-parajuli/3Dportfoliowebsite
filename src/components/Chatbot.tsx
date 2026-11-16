@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-import { projects, clientWork, conceptWork, automationProjects } from '@/data/portfolio';
+import { projects, recentProjects, clientWork, conceptWork, automationProjects } from '@/data/portfolio';
 
 type Message = { from: 'user' | 'bot'; text: string };
 
@@ -16,9 +16,12 @@ const SUGGESTIONS = [
 
 function getReply(input: string): string {
   const q = input.toLowerCase();
-  const automation = automationProjects.find(p => q.includes(p.name.toLowerCase()) || (p.name === 'FootyBitez' && /football|shorts/.test(q)) || (p.name === 'Trending Today' && /news.automation|ontrending/.test(q)));
+  const recent = recentProjects.find(p => (p.name.startsWith('Vanshavali') && /vanshavali|fam.?tree|genealogy|वंशावली/.test(q)) || (p.name === 'BizzTracker' && /bizz.?tracker/.test(q)));
+  if (recent) return `${recent.name}: ${recent.description} ${recent.focus} Status: ${recent.status}. ${recent.url}`;
+  if (/recent|latest|new projects/.test(q)) return 'The latest additions are Vanshavali (formerly FamTree), a bilingual family genealogy web app, and BizzTracker, a modular business workspace with a browser preview. Both mobile apps are in development. The Techwired horror automation pipeline also has separate long-form, Shorts and social workflows.';
+  const automation = automationProjects.find(p => q.includes(p.name.toLowerCase()) || (p.name === 'Atmospheric Horror Automation' && /horror|storytelling/.test(q)) || (p.name === 'FootyBitez' && /football|shorts/.test(q)) || (p.name === 'Trending Today' && /news.automation|ontrending/.test(q)));
   if (automation) return `${automation.name}: ${automation.description} Tools: ${automation.stack.join(', ')}. ${automation.links.map(l => `${l.label}: ${l.url}`).join(' · ')}`;
-  if (/automation|social media project/.test(q)) return 'Sudip’s social media automation projects are FootyBitez, a Python/Remotion football video pipeline, and Trending Today, a Nepali news image-card and daily digest workflow. The automation section links their repositories and social channels.';
+  if (/automation|social media project/.test(q)) return 'Sudip’s automation projects include FootyBitez football video workflows, Trending Today Nepali news publishing, and Atmospheric Horror Automation for long-form, Shorts and social storytelling. See the automation section for repositories and available channels.';
   if (/consult|marketing|advertis|growth|client|graphic|branding|google business/.test(q)) return `Sudip is a Business Growth & Digital Strategy Consultant alongside his Director role at Techwired Solutions. For EasyMoto and ChillPill, his work spans business planning, marketing and advertising execution, and digital operations. His broader client work includes websites, social media graphics and Google Business Profiles. Businesses include ${clientWork.map(c => c.name).join(', ')}. See the Business & Client Work section for scope.`;
   if (/sample|concept|redesign/.test(q)) return `The smaller redesign collection includes ${conceptWork.map(c => c.name).join(', ')}. These are independent sample concepts, not official business websites or commissioned launches. Expand Website redesign concepts below the client work.`;
   const project = projects.find(p => q.includes(p.name.toLowerCase()) || (p.name === 'LinkyPot' && /oneqrcard/.test(q)) || (p.name === 'ChillPill Gaming Cafe' && /chillpill|gaming cafe/.test(q)));
